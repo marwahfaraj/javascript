@@ -46,17 +46,17 @@ let stuffList = document.createElement("ul");
  * for loop
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
  */
-for (let i = 0; i < stuff.length; i++) {
-  let listItem = document.createElement("li");
-  listItem.innerHTML = stuff[i];
-  stuffList.append(listItem);
-}
+// for (let i = 0; i < stuff.length; i++) {
+//   let listItem = document.createElement("li");
+//   listItem.innerHTML = stuff[i];
+//   stuffList.append(listItem);
+// }
 
 /**
  * for...of loop and arrays
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
  */
-// for (const item of stuff) {
+// for (const item of stuff){
 //   let listItem = document.createElement("li");
 //   listItem.innerHTML = item;
 //   stuffList.append(listItem);
@@ -66,21 +66,23 @@ for (let i = 0; i < stuff.length; i++) {
  * foreach array method
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  */
-// stuff.forEach((item) => {
+// stuff.forEach((item)=>{
 //   let listItem = document.createElement("li");
 //   listItem.innerHTML = item;
 //   stuffList.append(listItem);
 // });
+
 
 /**
  * for...in loop and objects
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
  */
 // for (const singleObject in nestedObjects) {
-//   let listItem = document.createElement("li");
-//   listItem.innerHTML = `Name: ${nestedObjects[singleObject].name}`;
-//   stuffList.append(listItem);
-// }
+for (const singleObject in nestedObjects){
+  let listItem = document.createElement("li");
+  listItem.innerHTML = `Name: ${nestedObjects[singleObject].name}`;
+  stuffList.append(listItem);
+}
 
 
 article.append(stuffList);
